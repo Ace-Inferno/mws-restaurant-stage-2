@@ -1,3 +1,15 @@
+label.neighborhoods-label {
+  position: relative;
+  left: 10px;
+  top: 5px;
+  font-size: 13pt;
+}
+
+label.cuisines-label {
+  position: relative;
+  left: 10px;
+  font-size: 13pt;
+}
 
 .grid-wrapper {
   margin-left: auto;
@@ -36,7 +48,7 @@
 }
 
 .filter-options{
-  height: 215px;
+  height: 255px;
 }
 
 #neighborhoods-select {
@@ -67,7 +79,7 @@
 @media screen and (min-width: 376px) and (max-width: 425px) {
 
   .filter-options{
-    height: 215px;
+    height: 255px;
   }
   #neighborhoods-select {
     width: 90%;
@@ -83,13 +95,24 @@
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 765px){
+@media screen and (min-width: 526px) and (max-width: 765px){
+  label.neighborhoods-label {
+    position: relative;
+    left: 10px;
+    top: -25px;
+    font-size: 13pt;
+  }
+
+  label.cuisines-label {
+    position: relative;
+    left: -52px;
+    top: -25px;
+    font-size: 13pt;
+  }
   .filter-options{
-    height: 120px;
+    height: 145px;
   }
-  .filter-options select{
-    font-size: 14pt;
-  }
+
   #restaurants-list li {
     padding: 0px;
   }
@@ -97,16 +120,38 @@
     padding: 30px 0px 60px;
   }
   #neighborhoods-select {
-    width: 45%;
+    width: 35%;
     height: 73px;
+    font-size: 14pt;
+    position: relative;
+    left: -165px;
+    top: 29px;
   }
   #cuisines-select {
-    width: 45%;
+    width: 35%;
     height: 73px;
+    left: 275px;
+    font-size: 14pt;
+    position: relative;
+    top: -64px;
   }
 }
 
 @media screen and (min-width: 766px){
+  label.neighborhoods-label {
+    position: relative;
+    left: 20px;
+    top: -28px;
+    font-size: 13pt;
+  }
+
+  label.cuisines-label {
+    position: relative;
+    left: -84px;
+    font-size: 13pt;
+    top: -28px;
+  }
+
   .inside #map{
     height: 90%;
     width: 141%;
@@ -118,7 +163,6 @@
     top: 51px;
     z-index: 9;
   }
-
   .filter-options select {
     font-size: 13pt;
   }
@@ -133,12 +177,18 @@
 
   #neighborhoods-select {
     width: 22%;
-    height: 73px;
+    height: 62px;
+    position: relative;
+    left: -156px;
+    top: 18px;
   }
 
   #cuisines-select {
     width: 22%;
-    height: 73px;
+    height: 62px;
+    position: relative;
+    top: 18px;
+    left: -209px;
   }
 
   #restaurants-list li {
