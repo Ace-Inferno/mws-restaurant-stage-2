@@ -12,33 +12,51 @@ class DBHelper {
     return `http://localhost:${port}/restaurants`;
   }
 
+  static handleErrors(response) {
+      if (!response.ok) {
+          throw Error(response.statusText);
+      }
+      console.log("response good");
+
+      return response
+    }
   /**
    * Fetch all restaurants.
    */
   static fetchRestaurants(callback) {
-    /*fetch(`${DBHelper.DATABASE_URL}`)
+    fetch(`${DBHelper.DATABASE_URL}`)
+      .then(DBHelper.handleErrors)
       .then(function(response){
         const restaurants = response.json();
         return restaurants;
       })
-      .then(restaurants => callback(null,restaurants));
-      })
-      .then(function(myJson){
-        console.log(JSON.stringify(myJson));
-      });*/
-    let xhr = new XMLHttpRequest();
+      .then(function(restaurants){
+        callback(null,restaurants)
+      }).catch(function(restaurants){
+        /*
+          restaurantsDB.then(function(db){
+          var db = restaurants.result;
+          var tx = db.transaction("Restaurant_Data");
+          var store = tx.objectStore("Restaurant_Data");
+          return store.getall();
+          console.log("test");
+        })
+        callback(null, restaurants)
+        */
+      });
+  /*  let xhr = new XMLHttpRequest();
     xhr.open('GET', DBHelper.DATABASE_URL);
     xhr.onload = () => {
-      if (xhr.status === 200) { // Got a success response from server!
+      if (xhr.status === 200) {
         const json = JSON.parse(xhr.responseText);
         const restaurants = json;
         callback(null, restaurants);
-      } else { // Oops!. Got an error from server.
+      } else {
         const error = (`Request failed. Returned status of ${xhr.status}`);
         callback(error, null);
       }
     };
-    xhr.send();
+    xhr.send();*/
   }
 
   /**
@@ -157,7 +175,7 @@ class DBHelper {
   }
   //get alt text for image
   static altTextForImage(restaurant) {
-    return (restaurant.alt);
+    return (`${restaurant.name} a restaurant in New York`);
   }
   /**
    * Restaurant image URL.
