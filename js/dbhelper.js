@@ -16,6 +16,16 @@ class DBHelper {
    * Fetch all restaurants.
    */
   static fetchRestaurants(callback) {
+    /*fetch(`${DBHelper.DATABASE_URL}`)
+      .then(function(response){
+        const restaurants = response.json();
+        return restaurants;
+      })
+      .then(restaurants => callback(null,restaurants));
+      })
+      .then(function(myJson){
+        console.log(JSON.stringify(myJson));
+      });*/
     let xhr = new XMLHttpRequest();
     xhr.open('GET', DBHelper.DATABASE_URL);
     xhr.onload = () => {
