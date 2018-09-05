@@ -7,7 +7,7 @@ function handleSuccess () {
   console.log(restaurantData);
 }
 function handleError () {
-  console.log( 'An error occurred' );
+  console.log( 'An error occurred \uD83D\uDE1E' );
 }
 function getJSON(){
   const database = new XMLHttpRequest();
