@@ -3,6 +3,7 @@
     "restaurants": [
       {
         "name": "Mission Chinese Food",
+        "alt": "people at Mission Chinese Food restaurant in Manhattan ",
         "neighborhood": "Manhattan",
         "photograph": "1",
         "address": "171 E Broadway, New York, NY 10002",
@@ -46,6 +47,7 @@
       },
       {
         "name": "Emily",
+        "alt": "pizza from the restaurant Emily in Brooklyn",
         "neighborhood": "Brooklyn",
         "photograph": "2",
         "address": "919 Fulton St, Brooklyn, NY 11238",
@@ -89,6 +91,7 @@
       },
       {
         "name": "Kang Ho Dong Baekjeong",
+        "alt": "the Kang Ho Dong Baekjeong restaurant in Manhattan",
         "neighborhood": "Manhattan",
         "photograph": "3",
         "address": "1 E 32nd St, New York, NY 10016",
@@ -132,6 +135,7 @@
       },
       {
         "name": "Katz's Delicatessen",
+        "alt": "outside view of Katz's Delicatessen restaurant",
         "neighborhood": "Manhattan",
         "photograph": "4",
         "address": "205 E Houston St, New York, NY 10002",
@@ -175,6 +179,7 @@
       },
       {
         "name": "Roberta's Pizza",
+        "alt": "people eating at Roberta's Pizza located in Brooklyn",
         "neighborhood": "Brooklyn",
         "photograph": "5",
         "address": "261 Moore St, Brooklyn, NY 11206",
@@ -218,6 +223,7 @@
       },
       {
         "name": "Hometown BBQ",
+        "alt": "people eating at Hometown BBQ in Brooklyn",
         "neighborhood": "Brooklyn",
         "photograph": "6",
         "address": "454 Van Brunt St, Brooklyn, NY 11231",
@@ -261,6 +267,7 @@
       },
       {
         "name": "Superiority Burger",
+        "alt": "outside view of the restaurant Superiority Burger in Manhattan",
         "neighborhood": "Manhattan",
         "photograph": "7",
         "address": "430 E 9th St, New York, NY 10009",
@@ -304,6 +311,7 @@
       },
       {
         "name": "The Dutch",
+        "alt": "outside view of the restaurant The Dutch",
         "neighborhood": "Manhattan",
         "photograph": "8",
         "address": "131 Sullivan St, New York, NY 10012",
@@ -347,6 +355,7 @@
       },
       {
         "name": "Mu Ramen",
+        "alt": "people eating at the restaurant Mu Ramen located in Queens",
         "neighborhood": "Queens",
         "photograph": "9",
         "address": "1209 Jackson Ave, Queens, NY 11101",
@@ -390,7 +399,9 @@
       },
       {
         "name": "Casa Enrique",
+        "alt": "inside view of the restaurant Casa Enrique located in the Queens",
         "neighborhood": "Queens",
+        "photograph": "10",
         "address": "5-48 49th Ave, Queens, NY 11101",
         "latlng": {
           "lat": 40.743394,
