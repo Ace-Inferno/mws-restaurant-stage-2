@@ -17,7 +17,6 @@ class DBHelper {
           throw Error(response.statusText);
       }
       console.log("response good");
-
       return response
     }
   /**
@@ -31,32 +30,35 @@ class DBHelper {
         return restaurants;
       })
       .then(function(restaurants){
-        callback(null,restaurants)
+            callback(null, restaurants);
       }).catch(function(restaurants){
-        /*
-          restaurantsDB.then(function(db){
-          var db = restaurants.result;
+        var request = indexedDB.open("Restaurant_Database",1);
+
+        request.onsuccess = function(){
+          var db = request.result;
           var tx = db.transaction("Restaurant_Data");
           var store = tx.objectStore("Restaurant_Data");
-          return store.getall();
-          console.log("test");
-        })
-        callback(null, restaurants)
-        */
+          var storeRequest = store.getAll();
+          storeRequest.onsuccess = function(event){
+            var restaurants = storeRequest.result;
+            callback(null, restaurants);
+          }
+        };
       });
-  /*  let xhr = new XMLHttpRequest();
-    xhr.open('GET', DBHelper.DATABASE_URL);
-    xhr.onload = () => {
-      if (xhr.status === 200) {
-        const json = JSON.parse(xhr.responseText);
-        const restaurants = json;
-        callback(null, restaurants);
-      } else {
-        const error = (`Request failed. Returned status of ${xhr.status}`);
-        callback(error, null);
-      }
-    };
-    xhr.send();*/
+        /*  let xhr = new XMLHttpRequest();
+            xhr.open('GET', DBHelper.DATABASE_URL);
+            xhr.onload = () => {
+              if (xhr.status === 200) {
+                const json = JSON.parse(xhr.responseText);
+                const restaurants = json;
+                callback(null, restaurants);
+              } else {
+                  const error = (`Request failed. Returned status of ${xhr.status}`);
+                    callback(error, null);
+              }
+            };
+          xhr.send();
+        */
   }
 
   /**
