@@ -21,6 +21,7 @@ self.addEventListener('install', function(e) {
        '/css/responsive.css',
        '/css/restaurant.css',
        '/css/styles.css',
+       '/manifest.json',
      ]);
    })
 });
